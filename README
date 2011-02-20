@@ -2,6 +2,9 @@
 Set et/noet automatically when changing buffers.
 
 Defaults:
+  au BufEnter * :call TabSpacesDetect() 
 
-au BufEnter * :call TabSpacesDetect() 
+If this is too slow for bigger files, you could probably get away with:
+  au BufReadPost * :call TabSpacesDetect()
+
 
